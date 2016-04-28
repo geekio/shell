@@ -1,4 +1,5 @@
-FILE=$(date +"%Y-%m-%d:%H-%M-%S")
-wget --spider --no-check-certificate -p -r -nd -nv -e robots=off --tries 1 -o $FILE https://youremail.com
-egrep ' 4[0-451]| 5[0-11]' $FILE > "output" 
-mail -s "Broken links report $FILE" -F monitor@youremail.com < ./output 
+FILE=$(date +"%Y-%m-%d %H:%M:%S")
+/usr/local/bin/wget --spider --no-check-certificate -p -r -nd -nv -e robots=off --tries 1 -o "/usr/home/whoami/jobs/$FILE" https://yoursite.com
+/usr/bin/egrep -i -B 1 'broken' "/usr/home/whoami/jobs/$FILE" > "/usr/home/whoami/jobs/output"
+mail -s "Broken links report $FILE" -F monitor@yoursite.com < "/usr/home/whoami/jobs/output"
+

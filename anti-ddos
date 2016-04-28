@@ -1,0 +1,73 @@
+#!/bin/sh
+
+tail -300 /var/log/httpd-access.log | grep  -E "GET /announce" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq > bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /avatar/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /html5/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /connect/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+#tail -300 /var/log/httpd-access.log | grep  -E "GET /banners/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "/output/videos/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+#tail -300 /var/log/httpd-access.log | grep  -E "GET /assets/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /scjs/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /searchbox/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /p/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /iphone/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /vi/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /a/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /r/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /c/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /m/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /j/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /baltimoreroot" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /PublicSureServerSV" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /\d+/picture" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /counter" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /skins" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+#tail -300 /var/log/httpd-access.log | grep  -E "GET /clients" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /triggermail" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+#tail -300 /var/log/httpd-access.log | grep  -E "GET /\d+/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /ConvivaCommunicationProxy" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /iframe.php" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /twitter" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /creative" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /RealMedia" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /profile_images" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /lpconfig" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /jsc/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /media/img" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /tumblr_l" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /p.gif" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /linecamera/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /236x/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /45x45/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /static/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /whatads/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /Scripts/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /signed/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /invideo/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /wp-content/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "POST /v2\.2/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /clientscript/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /BingBar/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /pws/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /stickershop/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /min/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /widgets.js" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /tr\?" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /\~cdn/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /ads.js" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /images/2015/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "POST /web/ui/page/" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "(compatible; Synapse)" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "injected_by_wvs" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /set%" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /WEB-INF" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /testasp" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+tail -300 /var/log/httpd-access.log | grep  -E "GET /http" | grep -oE '^[0-9]{1,3}(\.[0-9]{1,3}){3}' | sort | uniq >> bunned
+
+# Complimenting the previous blacklist
+cat /usr/local/etc/pf/blacklist | sort | uniq >> bunned
+mv /usr/local/etc/pf/blacklist /usr/local/etc/pf/blacklist.old
+cat bunned | sort | uniq > /usr/local/etc/pf/blacklist
+pfctl -e -f /etc/pf.conf
+# Preventing ourselves of being banned   
+sed -ie "s#your.own.public.ip##g" /usr/local/etc/pf/blacklist

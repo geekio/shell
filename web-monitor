@@ -1,5 +1,5 @@
-FILE=$(date +"%Y-%m-%d %H:%M:%S")
-/usr/local/bin/wget --spider --no-check-certificate -p -r -nd -nv -e robots=off --tries 1 -o "/usr/home/whoami/jobs/$FILE" https://yoursite.com
+ILE=$(date +"%Y-%m-%d %H:%M:%S")
+/usr/local/bin/wget --spider --no-check-certificate -p -r -nd -nv -e robots=off --tries 1 -o "/usr/home/whoami/jobs/$FILE" https://yourdomain.com
 /usr/bin/egrep -i -B 1 'broken' "/usr/home/whoami/jobs/$FILE" > "/usr/home/whoami/jobs/output"
-mail -s "Broken links report $FILE" -F monitor@yoursite.com < "/usr/home/whoami/jobs/output"
-
+mail -s "Broken links report $FILE" -F monitor@yourdomain.com < "/usr/home/whoami/jobs/output"
+find /usr/home/whoami/jobs -type f -ctime +3d | egrep '\<[0-9]{4}(-[0-9]{2}){2} [0-9]{2}(:[0-9]{2}){2}' | xargs -I {} rm {}

@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/x-www-form-urlencoded" -d 'code=code&client_id=client_id&client_secret=client_secret&redirect_uri=urn:ietf:wg:oauth:2.0:oob&grant_type=authorization_code' https://accounts.google.com/o/oauth2/token
